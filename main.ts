@@ -1,6 +1,5 @@
 if (iscmons.button_is_pressed(pins.LED)) {
-    iscmons.servo_turn(pins.LED, 0, 2)
-    for (let index = 0; index < 1; index++) {
-        iscmons.servo_turn(pins.LED, 100, 15)
-    }
+    iscmons.motor_forward(pins.P16, pins.P20)
+    pause(2000)
+    iscmons.motor_stop(pins.P16, pins.P20)
 }
